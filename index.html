@@ -31,14 +31,15 @@
                         primary: '#414040',
                         secondary: '#707070',
                         btnColor: '#B68C5A',
-                        white: '#ffffff'
+                        white: '#ffffff',
                     },
                     fontFamily: {
                         Poppins: 'Poppins',
                     },
                     backgroundImage: {
-                        bannerBg: "url('./images/leaf01.png')",
-                        call_to_action: "url('./images/call.jpg')"
+                        bannerBg: "linear-gradient( rgba(17, 17, 17, 0),rgb(17, 17, 17)),url('./images/banner.png')",
+                        call_to_action: "url('./images/call.jpg')",
+
                     },
                 }
             }
@@ -49,9 +50,9 @@
 
 <body class="font-Poppins">
     <!-- Header Section Start -->
-    <header>
+    <header class="w-11/12  lg:w-10/12 mx-auto">
         <!-- Navbar Section start -->
-        <nav class="container lg:w-10/12 mx-auto  py-2 md:py-3 lg:py-4">
+        <nav class="py-2 md:py-3 lg:py-4">
             <div class="navbar bg-base-100">
                 <div class="navbar-start">
                     <a class=""><img class="W-[50%]" src="./images/logo2.png" alt=""></a>
@@ -66,10 +67,10 @@
                     </ul>
                 </div>
                 <div class="navbar-end">
-                    <a class="btn hidden sm:flex bg-btnColor text-white">Free Consultation</a>
+                    <a class="btn hidden sm:flex bg-btnColor text-white font-semibold">Free Consultation</a>
                     <div class="dropdown">
                         <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                            <i class="fa-solid fa-bars"></i>
+                            <i class="fa-solid fa-bars text-3xl"></i>
                         </div>
                         <ul tabindex="0"
                             class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 right-0 w-52 p-2 shadow text-primary  text-sm sm:text-base">
@@ -84,6 +85,24 @@
             </div>
         </nav>
         <!-- Navbar Section End -->
+        <!-- Banner Section Start -->
+        <section class="bg-bannerBg bg-no-repeat bg-cover bg-center  p-5 sm:p-10  lg:p-20 sm:py-30 lg:py-40 rounded-lg">
+            <div class=" text-white text-center">
+                <h1 class="text-3xl sm:text-4xl lg:text-6xl font-bold lg:w-3/5 mx-auto my-3 sm:my-4 lg:my-7">
+                    We Provide Effective Legal Solutions</h1>
+                <p class="text-xs sm:text-sm lg:text-base font-normal lg:w-3/5 mx-auto my-3 sm:my-4 lg:my-7">There are
+                    many
+                    variations of passages of
+                    Lorem Ipsum available, but the majority have suffered alteration in some form,by injected humour.
+                </p>
+                <div class="space-y-5 sm:space-y-0 sm:grid sm:grid-cols-12 gap-5 sm:w-[70%] lg:w-3/5 mx-auto">
+                    <input type="text" placeholder="Search your services"
+                        class="input input-bordered w-full  sm:col-span-8" />
+                    <button class="btn bg-btnColor text-white font-semibold w-full  sm:col-span-4">Search</button>
+                </div>
+            </div>
+        </section>
+        <!-- Banner Section End -->
         <!-- Header Section End -->
     </header>
 </body>
