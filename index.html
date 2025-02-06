@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legal-Solution-Tailwind_4.0-DaisyUi</title>
+    <title>Legal-Solution-Tailwind-DaisyUi</title>
     <!-- favicon Start -->
     <link rel="shortcut icon" href="./images/business.png" type="image/x-icon">
     <!-- favicon End -->
@@ -14,24 +14,78 @@
     <!-- google font cdn start -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <!-- google font cdn end -->
-    <!-- tailwind 4.0 and DaisyUi cdn start -->
+    <!-- tailwind and DaisyUi cdn start -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <!-- tailwind 4.0 and DaisyUi cdn end -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwind and DaisyUi cdn end -->
     <!-- Tailwind CSS Configuration start-->
-    <style type="text/tailwindcss">
-        @theme {
-            --color-clifford: #da373d;
-            --font-Garamond: "EB Garamond", serif;
-          }
-        </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#414040',
+                        secondary: '#707070',
+                        btnColor: '#B68C5A',
+                        white: '#ffffff'
+                    },
+                    fontFamily: {
+                        Poppins: 'Poppins',
+                    },
+                    backgroundImage: {
+                        bannerBg: "url('./images/leaf01.png')",
+                        call_to_action: "url('./images/call.jpg')"
+                    },
+                }
+            }
+        }
+    </script>
     <!-- Tailwind CSS Configuration End-->
 </head>
 
-<body class="font-Garamond">
+<body class="font-Poppins">
+    <!-- Header Section Start -->
+    <header>
+        <!-- Navbar Section start -->
+        <nav class="container lg:w-10/12 mx-auto  py-2 md:py-3 lg:py-4">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <a class=""><img class="W-[50%]" src="./images/logo2.png" alt=""></a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1 text-primary  text-sm sm:text-base ">
+                        <li><a>Home</a></li>
+                        <li><a>Services ></a></li>
+                        <li><a>Cases ></a></li>
+                        <li><a>Blog ></a></li>
+                        <li><a>Contact Us ></a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <a class="btn hidden sm:flex bg-btnColor text-white">Free Consultation</a>
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <i class="fa-solid fa-bars"></i>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 right-0 w-52 p-2 shadow text-primary  text-sm sm:text-base">
+                            <li><a>Home</a></li>
+                            <li><a>Services ></a></li>
+                            <li><a>Cases ></a></li>
+                            <li><a>Blog ></a></li>
+                            <li><a>Contact Us ></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar Section End -->
+        <!-- Header Section End -->
+    </header>
 </body>
 
 </html>
